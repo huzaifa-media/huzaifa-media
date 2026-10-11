@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huzaifa Media — Personal TikTok Scheduling Tool</title>
+<meta name="description" content="Huzaifa Media is a personal content-scheduling tool that auto-publishes your own videos to your own TikTok account at set times daily.">
+<style>
+:root{--bg:#0f0f14;--card:#17171f;--txt:#f2f2f5;--mut:#a9a9b8;--acc:#fe2c55;--acc2:#25f4ee}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.25rem}
+header{padding:1.2rem 0;border-bottom:1px solid #26262f;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.25rem}.logo span{color:var(--acc)}
+nav a{color:var(--mut);text-decoration:none;margin-left:1.2rem;font-size:.95rem}nav a:hover{color:var(--txt)}
+.hero{padding:4rem 0 3rem;text-align:center}
+.hero h1{font-size:2.4rem;margin:.5rem 0 1rem;line-height:1.2}
+.hero h1 .t{background:linear-gradient(90deg,var(--acc2),var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:600px;margin:0 auto 2rem}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:.85rem 2rem;border-radius:12px;text-decoration:none;font-weight:700}
+.btn:hover{filter:brightness(1.1)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2.5rem 0}
+.card{background:var(--card);border:1px solid #26262f;border-radius:14px;padding:1.4rem}
+.card h3{margin:.2rem 0 .6rem;font-size:1.05rem}.card p{color:var(--mut);font-size:.93rem;margin:0}
+.steps{margin:2.5rem 0}.step{display:flex;gap:1rem;margin-bottom:1.2rem}.n{flex:0 0 2.2rem;height:2.2rem;border-radius:50%;background:#26262f;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--acc2)}
+.faq{margin:2.5rem 0}.faq h3{font-size:1rem;margin:1.2rem 0 .3rem}.faq p{color:var(--mut);font-size:.93rem;margin:0}
+footer{border-top:1px solid #26262f;padding:1.6rem 0;margin-top:3rem;color:var(--mut);font-size:.88rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{color:var(--mut);margin-left:1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo">Huzaifa <span>Media</span></div>
+<nav><a href="/huzaifa-media/app.html">Open the app</a><a href="/huzaifa-media/terms.html">Terms</a><a href="/huzaifa-media/privacy.html">Privacy</a></nav>
+</header>
+
+<section class="hero">
+<h1>Your videos, published on <span class="t">autopilot</span>.</h1>
+<p>Huzaifa Media is a personal scheduling tool that auto-publishes your own videos to your own TikTok account at the times you choose — every day, without lifting a finger.</p>
+<a class="btn" href="/huzaifa-media/app.html">Connect your TikTok</a>
+</section>
+
+<section class="grid">
+<div class="card"><h3>📅 Set your schedule</h3><p>Pick the times of day you want to post. The scheduler handles the rest — 8am, 12pm, 4pm, 8pm, or whatever fits your audience.</p></div>
+<div class="card"><h3>🎬 Queue your videos</h3><p>Upload your video files with your own captions. They wait in your personal queue until their slot arrives.</p></div>
+<div class="card"><h3>🚀 Direct publishing</h3><p>At each scheduled time, Huzaifa Media publishes straight to your TikTok profile via TikTok's official Content Posting API.</p></div>
+</section>
+
+<section class="steps">
+<h2>How it works</h2>
+<div class="step"><div class="n">1</div><div><strong>Connect TikTok securely.</strong><br><span style="color:var(--mut)">Log in with TikTok's official Login Kit. Your credentials never touch our servers — TikTok handles the login.</span></div></div>
+<div class="step"><div class="n">2</div><div><strong>Upload videos &amp; write captions.</strong><br><span style="color:var(--mut)">Add your own original videos and captions to your posting queue.</span></div></div>
+<div class="step"><div class="n">3</div><div><strong>Pick posting times.</strong><br><span style="color:var(--mut)">Choose daily slots. A scheduled job publishes each video directly to your profile.</span></div></div>
+</section>
+
+<section class="faq">
+<h2>Questions</h2>
+<h3>Who is this for?</h3>
+<p>Creators who post consistently and want their own videos published on a reliable daily schedule.</p>
+<h3>Do you access anyone else's account?</h3>
+<p>No. Huzaifa Media connects to one TikTok account — yours — and only publishes content you provide.</p>
+<h3>Is my data shared or sold?</h3>
+<p>Never. See the <a href="/huzaifa-media/privacy.html" style="color:var(--acc2)">Privacy Policy</a>.</p>
+<h3>What permissions does it need?</h3>
+<p>Basic account info to log you in, plus video upload and publishing scopes so it can post your scheduled videos.</p>
+</section>
+
+<footer>
+<div>© 2026 Huzaifa Media. A personal scheduling tool.</div>
+<div><a href="/huzaifa-media/terms.html">Terms of Service</a><a href="/huzaifa-media/privacy.html">Privacy Policy</a></div>
+</footer>
+</div>
+</body>
+</html>

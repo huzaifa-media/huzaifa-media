@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huzaifa Media — Connected</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#0f0f14;color:#f2f2f5;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:1rem}
+.box{background:#17171f;border:1px solid #26262f;border-radius:16px;padding:2.5rem;max-width:560px;width:100%;text-align:center}
+.ok{font-size:3rem}.err{font-size:3rem}
+h1{font-size:1.4rem;margin:1rem 0 .5rem}
+p{color:#a9a9b8;font-size:.95rem}
+code{display:block;background:#0f0f14;border:1px dashed #fe2c55;border-radius:10px;padding:1rem;margin:1.2rem 0;word-break:break-all;font-size:1rem;color:#25f4ee;user-select:all}
+button{background:#fe2c55;color:#fff;border:0;border-radius:10px;padding:.7rem 1.6rem;font-weight:700;cursor:pointer;font-size:1rem}
+button:hover{filter:brightness(1.1)}
+.note{font-size:.8rem;margin-top:1.2rem}
+</style>
+</head>
+<body>
+<div class="box" id="box"><div class="ok">⏳</div><h1>Finishing up…</h1></div>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var box = document.getElementById('box');
+  var err = q.get('error'), code = q.get('code'), state = q.get('state');
+  if (err) {
+    box.innerHTML = '<div class="err">❌</div><h1>Authorization failed</h1><p>' +
+      (q.get('error_description') || err).replace(/</g,'&lt;') + '</p>';
+    return;
+  }
+  if (!code) {
+    box.innerHTML = '<div class="err">❌</div><h1>No authorization code received</h1><p>Please go back and try connecting again.</p>';
+    return;
+  }
+  box.innerHTML = '<div class="ok">✅</div><h1>TikTok connected!</h1>' +
+    '<p>Your authorization code (valid for a few minutes, single use):</p>' +
+    '<code id="c"></code>' +
+    '<button id="b">Copy code</button>' +
+    '<p class="note">Paste this code into Huzaifa Media to finish setup.</p>';
+  document.getElementById('c').textContent = code;
+  document.getElementById('b').onclick = function(){
+    navigator.clipboard.writeText(code).then(function(){ document.getElementById('b').textContent = 'Copied!'; });
+  };
+})();
+</script>
+</body>
+</html>
